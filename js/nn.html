@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.xyz/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    />
+<script src="https://cdn.jsdelivr.xyz/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <div class="brand">
+            <a class="navbar-brand" href="./index.html">EMS2.0</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./about.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active"  href="./employees.html">Employees</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link"  href="./jops.html">Jobs</a>
+              </li>
+            </ul>
+            
+           <form id="searchform" class="d-flex gap-2" role="search">
+            <div class="input-group ">
+              <input id="searchemployee" autocomplete="off" type="text" class="form-control" placeholder="Search for emplyee ..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+              
+                <button id="btnsearch" class="btn btn-success" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg></button>
+            </div>
+            <div class="vr text-white"></div>
+            
+            
+            <a href="./index.html">
+              <button  class="btn btn-warning" type="button" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                <path d="M7.5 1v7h1V1h-1z"/>
+                <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
+                </svg>
+            </button>
+             </a>
+          
+            
+           </form>
+           
+           
+        </div> 
+    </nav>
+
+
+
+
+
+    <div class="container-fluid mt-3">
+        <div class="row justify-content-center gap-1">
+          <div class="col-md-2 ">
+            <ul class="list-group shadow-lg  mb-3 bg-body rounded mb-3">
+              <li class="list-group-item active" aria-current="true">Employee Data</li>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModa4" class="list-group-item list-group-item-action ">Add Employee</a>
+            </ul>
+
+            <ul class="list-group shadow-lg  mb-3 bg-body rounded  mb-3">
+                <li class="list-group-item active" aria-current="true">Related Links</li>
+                <a href="./jops.html" class="list-group-item list-group-item-action ">Jobs List</a>
+            </ul>
+          </div>
+     
+          
+        </div>
+      </div>
+                
+
+
+
+  
+                           
+
+      <div class="modal fade" id="exampleModa4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content ">
+            <div class="modal-header text-bg-dark">
+             <h5 class="modal-title" id="exampleModalLabe4">Add Employee details</h5>
+              <button type="button" class="btn-close-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body px-4 m-1">
+              <form class="row g-3 needs-validation" novalidate>
+                  <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="12/09/2009">
+                        <div class="col-md-6" autocomplete="off">
+                          
+                          <input type="text" class="form-control" id="firstname"  placeholder="First Name" required>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+                        <div class="col-md-6" autocomplete="off">
+                          
+                          <input type="text" class="form-control" id="lastname"  placeholder="Last Name" required>
+  
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+  
+                        <div class="col-md-6" autocomplete="off">
+                          
+                          <input type="email" class="form-control" id="emailemployee"   placeholder="Email" required>
+                          <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        </div>
+  
+                        <div class="col-md-6" autocomplete="off">
+                          
+                            <input type="text" class="form-control" id="empolyeeid"  placeholder="ID" required>
+                            <div class="valid-feedback">
+                              Looks good!
+                            </div>
+                        </div>
+  
+                        <div class="col-md-12">
+                          <select class="form-select" id="selectjop" required>
+                            <option selected disabled>Select Job For Employee</option>
+                            <option>Web Developer</option>
+                            <option>Graphic Designer</option>
+                            <option>Web Designer</option>
+                            <option>Digital Marketer</option>
+                          </select>
+                        </div>
+                           
+                        <div class="col-md-10 d-flex">
+                          <button id="newemployeeform" type="button" class="btn btn-sm btn-success flex-fill">Add Employee</button>
+                        </div>
+
+                        <div class="col-md-2 d-flex">
+                          <button type="button" class="btn btn-sm btn-warning flex-fill" data-bs-dismiss="modal">Close</button>
+                        </div>     
+              </form>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+
+
+
+
+      <script src="./model.js"></script>
+      <script src="./employee.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

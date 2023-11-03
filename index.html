@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Word Scramble Game</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.xyz/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    />
+<script src="https://cdn.jsdelivr.xyz/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="bk">
+    <div id="page" class="parent hide">
+      <h2>Word Scramble</h2>
+      <div class="content">
+        <p id="scrambleWord"></p>
+        <div class="details">
+          <p>Hint: <span id="hint"></span></p>
+          <p>Time Left: <b id="timer">20</b>s</p>
+        </div>
+        <input
+          type="text"
+          spellcheck="false"
+          placeholder="Enter a valid word"
+          id="inputWord"
+        />
+        <div id="buttons" class="buttons">
+          <button id="refreshWord">Refresh Word</button>
+          <button id="checkWord">Check Word</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="conditiontrue" class="parent hide shadow-lg">
+      <div class="content">
+        <div class="card-body text-center"> <img src="https://img.icons8.com/bubbles/200/000000/trophy.png">
+          <h4>CONGRATULATIONS!</h4>
+          <p>Congratulations on your incredible success! I always knew you could do it, and I'm incredibly proud of you.</p> <button id="continuepage" class="btn btn-out btn-square continue">CONTINUE</button>
+      </div>
+       
+      </div>
+    </div>
+
+    <div id="conditionfalse" class="parent hide shadow-lg">
+      <div class="content">
+        <div class="card-body text-center"> <img style="margin-left: 5.5rem;" class="rounded-3 w-50  d-block " src="./3d-rendering-emotions.jpg">
+          <h4 class="fw-bold">INVALID WORD</h4>
+          <p>I know this won’t be easy, but I also know you’ve got what it takes to get through it!</p>
+           <button id="tryagain" class="btn  btn-warning">Try Again</button>
+      </div>
+       
+      </div>
+    </div>
+    
+
+
+    
+    <script src="js/words.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
